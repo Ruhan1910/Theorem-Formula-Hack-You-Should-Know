@@ -4,4 +4,4 @@ written in the form am + bn for nonnegative integers a, b is mn - m - n.
 A consequence of the theorem is that there are exactly (m - 1)(n - 1)/2 positive integers which cannot be expressed in the form am + bn. The proof is based on the fact that in each
 pair of the form (k, mn - m - n - k) (k >= 0), exactly one element is expressible.
 
-Resources - <lint> https://artofproblemsolving.com/wiki/index.php/Chicken_McNugget_Theorem?srsltid=AfmBOoom-uNrnz7xqul3tUzCZfEEK03xSM2B9EgKUtpPrtPrNzwBHuZb <link>
+Resources - <link> https://artofproblemsolving.com/wiki/index.php/Chicken_McNugget_Theorem?srsltid=AfmBOoom-uNrnz7xqul3tUzCZfEEK03xSM2B9EgKUtpPrtPrNzwBHuZb <link>
