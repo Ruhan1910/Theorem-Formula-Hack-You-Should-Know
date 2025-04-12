@@ -14,4 +14,4 @@ It efficiently solves the "maximum subarray problem" with a time complexity of O
 **3. Result:**
 After iterating through the entire array, globalSum will hold the maximum sum of any contiguous subarray. 
 
-(link)[https://en.wikipedia.org/wiki/Maximum_subarray_problem]
+Resourses: [link](https://en.wikipedia.org/wiki/Maximum_subarray_problem)
