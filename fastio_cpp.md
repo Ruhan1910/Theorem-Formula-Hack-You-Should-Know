@@ -1,4 +1,4 @@
-# Let's learn: 
+# cin.tie(nullptr): 
 What tie() really do? Each stream (cin, cout, cerr, etc) can be tied to another stream. Being tied means that before any input operation on this stream, the tied stream gets flushed. What does that mean?
 --When we print something like cout << "HELLO"; the text "HELLO" is not always sent to the terminal immediately; instead, it's stored in an output buffer (a chunk of memory). The buffer gets written out (flushed) 
 to the terminal when 
