@@ -1,3 +1,7 @@
+# ios::sync_with_stdio(false) 
+1. By default, C++ iostream (cin, cout) are synchronized with C stdio (scanf, printf)
+2. That means every operation tries to stay in lockstep with C I/O -> extra overhead.
+3. Turning it off removes that overhead, making cin/cout faster
 # cin.tie(nullptr): 
 What tie() really do? Each stream (cin, cout, cerr, etc) can be tied to another stream. Being tied means that before any input operation on this stream, the tied stream gets flushed. What does that mean?
 --When we print something like cout << "HELLO"; the text "HELLO" is not always sent to the terminal immediately; instead, it's stored in an output buffer (a chunk of memory). The buffer gets written out (flushed) 
@@ -6,6 +10,7 @@ to the terminal when
 2. You explicitly flush it, or
 3. The program ends, or
 4. A tie input (cin) forces it.
+
 So flushing means take everything sitting in the buffer, and actually write it to the output(screen, file, etc)
 You can flush manually with
 1. cout << flush;
@@ -44,8 +49,3 @@ What does endl do?
 1. prints a newline
 2. flushes the buffer manually
 So even if you have untied cin from cout, endl will still flush, because that is its job.
-
-# ios::sync_with_stdio(false) 
-1. By default, C++ iostream (cin, cout) are synchronized with C stdio (scanf, printf)
-2. That means every operation tries to stay in lockstep with C I/O -> extra overhead.
-3. Turning it off removes that overhead, making cin/cout faster
