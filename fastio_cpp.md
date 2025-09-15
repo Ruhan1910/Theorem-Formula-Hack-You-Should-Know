@@ -1,3 +1,4 @@
+# Let's learn: 
 What tie() really do? Each stream (cin, cout, cerr, etc) can be tied to another stream. Being tied means that before any input operation on this stream, the tied stream gets flushed. What does that mean?
 --When we print something like cout << "HELLO"; the text "HELLO" is not always sent to the terminal immediately; instead, it's stored in an output buffer (a chunk of memory). The buffer gets written out (flushed) 
 to the terminal when 
@@ -31,7 +32,8 @@ So the user might not see the "Enter n: " prompt until after typing something.
 Because flushing is slow (it forces an immediate system call).
 In competitive programming, you usually don't care about prompts, so you untie streams(cin.tie(0)) to avoid extra flushing and save time. 
 
-# Note: Actually flushing = emptying the output buffer -> which means printing/sending the data right now.
+# Note: 
+Actually flushing = emptying the output buffer -> which means printing/sending the data right now.
 
 # Why cout.tie(0) is not usefull?
 1. Generally, cin is tied with cout. So cin.tie(0) unties cin from cout.
