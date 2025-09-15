@@ -39,3 +39,13 @@ Actually flushing = emptying the output buffer -> which means printing/sending t
 1. Generally, cin is tied with cout. So cin.tie(0) unties cin from cout.
 2. Cout is not tied to anything by default, so cout.tie(0) does nothing.
 
+# use endl with fastio?
+What does endl do?
+1. prints a newline
+2. flushes the buffer manually
+So even if you have untied cin from cout, endl will still flush, because that is its job.
+
+# ios::sync_with_stdio(false) 
+1. By default, C++ iostream (cin, cout) are synchronized with C stdio (scanf, printf)
+2. That means every operation tries to stay in lockstep with C I/O -> extra overhead.
+3. Turning it off removes that overhead, making cin/cout faster
