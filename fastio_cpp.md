@@ -19,16 +19,20 @@ You can flush manually with
 
 # Without flush
 cout << "Enter n: "; // stays in buffer
+
 cin >> n; // user sees nothing
 
 with default tie (cin tied to cout): 
+
 So every time you do (cin >> x;), it forces cout to flush first. This ensures that prompts like cout << "Enter n: "; will appear immediately before waiting for input.
 1. Before cin >> n; runs, cout is flushed automatically, so "Enter n: " appears.
 2. This is why cin is tied to cout by default - so prompts show up right away.
 
 # If we use cin.tie(nullptr) // cin.tie(0) then:
 It will untie cout from cin and
+
 cout << "Enter n: "; //stay in buffer
+
 cin >> n; //does not flush anymore
 
 So the user might not see the "Enter n: " prompt until after typing something.
